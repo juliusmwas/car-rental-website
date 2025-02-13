@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VroomHire car room</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="icon" href="fv.png" type="image/x-icon">
+</head>
+<body class="body">
+    <header>
+        <nav>
+              <h1>VroomHire</h1>        
+              <ul id="menulist">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_page.html">About</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="contact_page.html">Contact</a></li>
+              </ul> 
+              <div class="menu-icon">
+                <i class="ri-menu-fill" onclick="toggleMenu()"></i>
+              </div>   
+        </nav>
+      </header>
+      <section class="cars-page">
+        <div class="filter-sort-bar">
+          <select id="filter" aria-label="Filter cars">
+            <option value="all">All Types</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="offload">Off-load</option>
+            <option value="luxury">Luxury</option>
+            <option value="minibus">Minibus</option>
+            <option value="budget">Budget-Cars</option>
+
+          </select>
+          <select id="sort" aria-label="Sort cars">
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+            <option value="availability">Availability</option>
+          </select>
+        </div>
+      
+        <div class="cars-container">
+          <!-- Example car card -->
+          <div class="car-card" data-type="luxury" data-price="100" data-availability="available">
+            <img src="audi 1.jpg" alt="Car image">
+            <h3>Audi</h3>
+            <p>Price: $100/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Audi" data-car-price="$100/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="luxury" data-price="100" data-availability="available">
+            <img src="audi 3.jpg" alt="Car image">
+            <h3>Audi</h3>
+            <p>Price: $100/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Audi" data-car-price="$100/day">Rent</button>
+          </div>
+          <div class="car-card" data-type="luxury" data-price="100" data-availability="available">
+            <img src="audi 5.jpg" alt="Car image">
+            <h3>Audi</h3>
+            <p>Price: $100/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Audi" data-car-price="$100/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="luxury" data-price="100" data-availability="available">
+            <img src="benz 1.jpg" alt="Car image">
+            <h3>benz</h3>
+            <p>Price: $100/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Benz" data-car-price="$100/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="luxury" data-price="100" data-availability="available">
+            <img src="benz 2.jpg" alt="Car image">
+            <h3>Benz</h3>
+            <p>Price: $100/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Benz" data-car-price="$100/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="luxury" data-price="100" data-availability="available">
+            <img src="benz 5.jpg" alt="Car image">
+            <h3>Benz</h3>
+            <p>Price: $100/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Benz" data-car-price="$100/day">Rent</button>
+          </div>
+    
+          <div class="car-card" data-type="luxury" data-price="50" data-availability="available">
+            <img src="bmw 2.jpg" alt="Car image">
+            <h3>BMW</h3>
+            <p>Price: $50/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="BMW" data-car-price="$50/day">Rent</button>
+        </div>
+      
+          <div class="car-card" data-type="sedan" data-price="50" data-availability="available">
+            <img src="corolla 1.jpg" alt="Car image">
+            <h3>Toyota Corolla</h3>
+            <p>Price: $50/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Corolla" data-car-price="$50/day">Rent</button>
+          </div>
+          <div class="car-card" data-type="offload" data-price="150" data-availability="available">
+            <img src="D-Max 1.jpg" alt="Car image">
+            <h3>D-Max</h3>
+            <p>Price: $150/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="D-Max" data-car-price="$150/day">Rent</button>
+          </div>
+          <div class="car-card" data-type="budget" data-price="50" data-availability="available">
+            <img src="demio 6.jpg" alt="Car image">
+            <h3>Mazda Demio</h3>
+            <p>Price: $50/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Mazda Demio" data-car-price="$50/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="suv" data-price="200" data-availability="available">
+            <img src="forester 1.png" alt="Car image">
+            <h3>Subaru forester</h3>
+            <p>Price: $200/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Subaru forester" data-car-price="$200/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="minibus" data-price="150" data-availability="available">
+            <img src="hiace 1.jpg" alt="Car image">
+            <h3>Toyota Hiace</h3>
+            <p>Price: $150/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Hiace" data-car-price="$150/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="minibus" data-price="150" data-availability="available">
+            <img src="hiace 2.jpeg" alt="Car image">
+            <h3>Toyota Hiace</h3>
+            <p>Price: $150/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Hiace" data-car-price="$150/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="offload" data-price="150" data-availability="available">
+            <img src="hilux 2.jpg" alt="Car image">
+            <h3>Toyota Hilux</h3>
+            <p>Price: $150/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Hilux" data-car-price="$150/day">Rent</button>
+          </div>
+
+
+          <div class="car-card" data-type="suv" data-price="200" data-availability="available">
+            <img src="pajero 1.jpg" alt="Car image">
+            <h3>Mitsubishi Pajero</h3>
+            <p>Price: $200/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Mitsubishi Pajero" data-car-price="$200/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="suv" data-price="200" data-availability="available">
+            <img src="prado 4.jpg" alt="Car image">
+            <h3>Toyota Prado</h3>
+            <p>Price: $200/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Prado" data-car-price="$200/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="sedan" data-price="150" data-availability="available">
+            <img src="subaru 1.png" alt="Car image">
+            <h3>Subaru Legacy</h3>
+            <p>Price: $150/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Subaru Legacy" data-car-price="$150/day">Rent</button>
+          </div>
+          <div class="car-card" data-type="offload" data-price="50" data-availability="available">
+            <img src="suzuki 1.jpg" alt="Car image">
+            <h3>Suzuki</h3>
+            <p>Price: $50/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Suzuki" data-car-price="$50/day">Rent</button>
+          </div>
+
+
+          <div class="car-card" data-type="suv" data-price="200" data-availability="available">
+            <img src="v8 1.jpg" alt="Car image">
+            <h3>Toyota Land Cruiser V8</h3>
+            <p>Price: $200/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Land Cruiser V8" data-car-price="$200/day">Rent</button>
+          </div>
+
+          <div class="car-card" data-type="suv" data-price="200" data-availability="available">
+            <img src="v8 2.jpg" alt="Car image">
+            <h3>Toyota Land Cruiser V8</h3>
+            <p>Price: $200/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Land Cruiser V8" data-car-price="$200/day">Rent</button>
+          </div>
+
+
+          <div class="car-card" data-type="budget" data-price="50" data-availability="available">
+            <img src="vitz 1.jpg" alt="Car image">
+            <h3>Toyota Vitz</h3>
+            <p>Price: $50/day</p>
+            <p>Availability: Available</p>
+            <button class="rent-btn" data-car-name="Toyota Vitz" data-car-price="$50/day">Rent</button>
+          </div>
+
+       
+
+      </section>
+      <form id="carBookingForm" style="display: none; border: 1px solid #ccc; padding: 20px; width: 100%; max-width: 500px; margin: auto;">
+        <h2>Car Rental Booking Form</h2>
+      
+        <!-- Customer Details -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required><br><br>
+      
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+      
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+      
+        <!-- Rental Details -->
+        <label for="carModel">Car Model:</label>
+        <select id="carModel" name="carModel" required>
+          <option value="">-- Select a car --</option>
+          <option value="Toyota Corolla">Toyota Corolla</option>
+          <option value="Honda Civic">Honda </option>
+          <option value="Toyota vitz">Toyota vitz</option>
+          <option value="Demio">Demio</option>
+          <option value="suzuki">suzuki </option>
+          <option value="subaru">subaru</option>
+          <option value="Rav4">Rav4</option>
+          <option value="xtrail">xtrail</option>
+          <option value="Mitsubishi">Mitsubishi</option>
+          <option value="Toyota Prado">Toyota Prado</option>
+          <option value="subaru forester">subaru forester</option>
+          <option value="Benz">Benz</option>
+          <option value="BMW">BMW</option>
+          <option value="V8">V8</option>
+          <option value="Hilux">Hilux</option>
+          <option value="Audi">Audi</option>
+          <option value="Toyota Hiace">Toyota Hiace</option>
+        </select><br><br>
+      
+        <label for="pickupLocation">Pickup Location:</label>
+        <input type="text" id="pickupLocation" name="pickupLocation" placeholder="Enter pickup location" required><br><br>
+      
+        <label for="rentalStartDate">Rental Start Date:</label>
+        <input type="date" id="rentalStartDate" name="rentalStartDate" required><br><br>
+      
+        <label for="rentalEndDate">Rental End Date:</label>
+        <input type="date" id="rentalEndDate" name="rentalEndDate" required><br><br>
+      
+        <!-- Payment Information -->
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="">-- Select a payment method --</option>
+          <option value="M-Pesa">M-Pesa</option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="PayPal">PayPal</option>
+        </select><br><br>
+      
+        <label for="totalAmount">Total Amount (in KES):</label>
+        <input type="number" id="totalAmount" name="totalAmount" placeholder="Enter total amount" required><br><br>
+      
+        <!-- Additional Information -->
+        <label for="specialRequests">Special Requests (Optional):</label>
+        <textarea id="specialRequests" name="specialRequests" placeholder="Any additional requests or requirements" rows="4"></textarea><br><br>
+      
+        <!-- Agreement -->
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label><br><br>
+      
+        <!-- Submit -->
+        <button type="submit" id="submitBooking">Confirm Booking</button>
+      </form>
+      
+
+
+      <footer class="footer">
+        <div class="footer-contact">
+          <p>Email: support@VroomHire.com</p>
+          <p>Phone: +123 456 789</p>
+        </div>
+        <p>© 2025 VroomHire. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>   
+</body>
+</html>

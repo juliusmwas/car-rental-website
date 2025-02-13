@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VroomHire Car Rental Service</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="icon" href="fv.png" type="image/x-icon">
+
+</head>
+<body>
+  <header>
+    <nav>
+          <h1>VroomHire</h1>        
+          <ul id="menulist">
+            <li><a href="#">Home</a></li>
+            <li><a href="about_page.html">About</a></li>
+            <li><a href="car_page.html">Cars</a></li>
+            <li><a href="contact_page.html">Contact</a></li>
+            <button class="btn" onclick="openModal('login-modal')">Login</button>
+            <button class="btn" onclick="openModal('signup-modal')">Sign Up</button>
+          </ul> 
+          <div class="menu-icon">
+            <i class="ri-menu-fill" onclick="toggleMenu()"></i>
+          </div>   
+    </nav>
+  </header>
+
+ 
+  <!-- Modals -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('login-modal')">&times;</span>
+      <h2>Login</h2>
+      <form onsubmit="handleLogin(event)">
+        <input type="email" placeholder="Enter your email" required />
+        <input type="password" placeholder="Enter your password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="signup-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('signup-modal')">&times;</span>
+      <h2>Sign Up</h2>
+      <form onsubmit="handleSignup(event)">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="Address" required />
+        <input type="password" placeholder="Create Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+    <h1>Drive Your Dream Car Today!</h1>
+      <p>Explore our wide range of vehicles for rent at unbeatable prices.Flexible plans, no hidden fees!</p>
+      <button class="btn1"><a href="car_page.html">Rent Now</a></button>
+      <button class="btn1"><a href="car_page.html">Explore Our Cars</a></button>
+  </section>
+
+  <section class="services-container">
+      <h2>Why Choose Us</h2>
+      <p>At VroomHire, we pride ourselves on delivering top-notch car rental solutions tailored to your needs.</p>
+      <ul>
+        <li>Wide Car Selection</li>
+        <li>Affordable Pricing</li>
+         <li>24/7 Customer Support</li>
+        <li>Flexible Rental PLans</li>
+       </ul>
+  </section>
+
+  <footer class="footer">
+      <div class="footer-contact">
+        <p>Email: support@VroomHire.com</p>
+        <p>Phone: +123 456 789</p>
+      </div>
+      <p>© 2025 VroomHire. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

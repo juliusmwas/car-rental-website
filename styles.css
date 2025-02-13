@@ -1,0 +1,659 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root{
+  --main-color:#2C3E50;
+  --second-main-color:#F5F5F5;
+  --text-color:#fff;
+  --button-color:#007bff;
+  --button-hover-color: #0056b3;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    position: relative;
+    height: 70px;
+}
+nav h1{
+  color: var(--text-color);
+}
+nav ul{
+   display: flex;
+   gap: 30px;
+   align-items: center;
+}
+nav ul li{
+  list-style-type: none;  
+}
+nav ul li a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+.menu-icon{
+  color: var(--second-main-color);
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+#menulist{
+  transition:  all 0.5s ease;
+  max-height: none;
+  overflow: hidden;
+}
+.btn{
+  background-color: var(--button-color);
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90px;
+  column-rule: var(--text-color);
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: var(--button-hover-color);
+}
+ .btn1 a{
+  text-decoration: none;
+  color: var(--text-color);
+ }
+@media (max-width: 600px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--main-color);
+    gap: 0;
+    max-height: 0; /* Hidden by default */
+  }
+
+  nav ul li {
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on smaller screens */
+  }
+}
+
+/* Styling for Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px; /* Space inside the section */
+  background: url('bg1.jpg') no-repeat center/cover; /* Add a background image */
+  color: var(--text-color); /* White text for contrast */
+  min-height: 90vh;
+}
+
+/* Heading Style */
+.hero h1 {
+  font-size: 2.5rem; /* Large font size */
+  margin-bottom: 20px;
+}
+
+/* Paragraph Style */
+.hero p {
+  font-size: 1.2rem; /* Medium-sized font */
+  margin-bottom: 30px;
+  line-height: 1.5;
+  max-width: 600px; /* Limit paragraph width */
+}
+
+/* Button Style */
+.hero .btn1 {
+  padding: 10px 20px;
+  margin: 10px; /* Space between buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-color); /* Use your main theme color */
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn1:hover {
+  background-color: var(--button-hover-color); /* Change on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph size */
+    margin-bottom: 20px;
+  }
+
+  .hero .btn1 {
+    font-size: 0.9rem; /* Slightly smaller buttons */
+    padding: 8px 16px;
+  }
+}
+
+/* General Styling for Services Section */
+
+.services-container {
+  padding: 50px 20px;
+  text-align: center; /* Center-align content */
+  background-color: var(--second-main-color); /* Set a background color */
+  color: var(--text-color); /* Text color */
+}
+
+.services-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--main-color); /* Use main theme color for the heading */
+}
+
+.services-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; /* Center-align the paragraph */
+  color: #2C3E50;
+}
+
+.services-container ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+  gap: 20px; /* Space between items */
+}
+
+.services-container ul li {
+  font-size: 1.1rem;
+  background-color: var(--main-color); /* Background for each item */
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  color: #fff; /* White text for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  .services-container h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  .services-container p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .services-container ul {
+    grid-template-columns: 1fr; /* Switch to single-column layout */
+  }
+
+  .services-container ul li {
+    font-size: 1rem; /* Adjust item font size */
+    padding: 10px; /* Smaller padding */
+  }
+}
+
+/* General Styling for about Section */
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  flex: 1;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  margin-top: 0.5rem;
+}
+
+.about-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.our-services, .why-choose-us, .who-we-are{
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+section {
+  flex: 1;
+  background: var(--text-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--second-main-color);
+  font-weight: bold;
+}
+section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Buttons */
+.about-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about-cta .btn {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.about-cta .btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+
+  section p, section ul {
+    font-size: 0.9rem;
+  }
+
+  .about-cta .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 601px) {
+  .footer {
+    margin-top: auto;
+  }
+}
+/* Contact Page */
+.contact {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--second-main-color);
+}
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+.contact-form {
+  max-width: 600px; 
+  margin-top: 20px;
+  background: var(--main-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f8c202;
+}
+
+.form-submit {
+  text-align: right;
+}
+
+.form-submit button {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-submit button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .form-submit button {
+    padding: 8px 16px;
+  }
+}
+/*cars section*/
+
+.cars-page {
+  padding: 20px;
+}
+
+.filter-sort-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-sort-bar select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  background: var(--text-color);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.car-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.car-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.car-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+@media (max-width: 600px) {
+  .filter-sort-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cars-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rent-btn {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rent-btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+  /* Centering the form on the page */
+  #carBookingForm {
+    background-color: var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  #carBookingForm h2 {
+    text-align: center;
+    color: #f3f1f1;
+    margin-bottom: 20px;
+  }
+
+  /* Styling labels */
+  #carBookingForm label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f5f4f4;
+    font-weight: bold;
+  }
+
+  /* Styling inputs, select, and textarea */
+  #carBookingForm input[type="text"],
+  #carBookingForm input[type="email"],
+  #carBookingForm input[type="tel"],
+  #carBookingForm input[type="date"],
+  #carBookingForm input[type="number"],
+  #carBookingForm select,
+  #carBookingForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  #carBookingForm input[type="text"]:focus,
+  #carBookingForm input[type="email"]:focus,
+  #carBookingForm input[type="tel"]:focus,
+  #carBookingForm input[type="date"]:focus,
+  #carBookingForm input[type="number"]:focus,
+  #carBookingForm select:focus,
+  #carBookingForm textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+
+  /* Styling the checkbox */
+  #carBookingForm input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+  /* Styling the submit button */
+  #carBookingForm button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  #carBookingForm button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Styling links in the form */
+  #carBookingForm a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  #carBookingForm a:hover {
+    text-decoration: underline;
+  }
+
+  /* Add some spacing for better readability */
+  #carBookingForm textarea {
+    resize: none;
+  }
+
+/*cars section*/
+.footer {
+  background-color: var(--main-color); /* Dark background */
+  color: var(--text-color); /* Light text */
+  padding: 1px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.footer-contact p {
+  margin:  0;
+  color: var(--text-color);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--main-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  background: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-content input, 
+  .modal-content button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
